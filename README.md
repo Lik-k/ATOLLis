@@ -1,5 +1,7 @@
 # ATOLLis
 
+Версия Java 20
+
 Автотесты в связке Java + Selenium
 Ссылка: https://demoqa.com/automation-practice-form
 
