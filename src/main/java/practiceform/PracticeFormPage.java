@@ -46,9 +46,6 @@ public class PracticeFormPage extends BasePage {
     // заполнение всех полей в форме регистрации
     public PracticeFormPage registrationStudent(String testFirstName, String testLastName, String testEmail, String testMobileNumber, String testCurrentAddress){
 
-
-
-
         driver.findElement(inputFirstName).sendKeys(testFirstName);
         driver.findElement(inputLastName).sendKeys(testLastName);
         driver.findElement(inputEmail).sendKeys(testEmail);
