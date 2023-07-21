@@ -17,6 +17,6 @@ public class PracticeFormTest extends BaseTest {
         // запускает сценарий заполнения формы
         practiceFormPage.registrationStudent(testFirstName, testLastName, testEmail, testMobileNumber, testCurrentAddress);
 
-        //        basePage.closeBrowser();
+        // basePage.closeBrowser();
     }
 }
