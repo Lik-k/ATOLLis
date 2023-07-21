@@ -15,10 +15,6 @@ public class BasePage {
         driver.get(url);
     }
 
-    // метод закрытия браузера
-    public void closeBrowser() {
-        driver.close();
-    }
     //    public WebElement waitElementIsVisible(WebElement element) {
     //        new WebDriverWait(driver, Duration.ofSeconds(EXPLICIT_WAIT)).until(ExpectedConditions.visibilityOf(element));
     //

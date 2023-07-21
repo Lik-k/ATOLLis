@@ -1,9 +1,8 @@
 package tests.practiceform;
 
 import org.testng.annotations.Test;
+import practiceform.FormDto;
 import tests.base.BaseTest;
-
-import static tests.practiceform.DataObject.*;
 
 
 // сценарий теста
@@ -15,8 +14,6 @@ public class PracticeFormTest extends BaseTest {
         basePage.open("https://demoqa.com/automation-practice-form");
 
         // запускает сценарий заполнения формы
-        practiceFormPage.registrationStudent(testFirstName, testLastName, testEmail, testMobileNumber, testCurrentAddress);
-
-        // basePage.closeBrowser();
+        practiceFormPage.registrationStudent(FormDto.testData());
     }
 }
