@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 
+import static common.ResourceFileFinder.getResourceFilePath;
+
 // локаторы и методы страницы
 public class PracticeFormPage extends BasePage {
 
@@ -31,16 +33,27 @@ public class PracticeFormPage extends BasePage {
     By buttonSubmit = By.id("submit");
 
 
+    String fileName = "dream.jpg";
+    public String ResourceFileFinder(){
+        String absolutePath = getResourceFilePath(fileName);
+        if (absolutePath != null) {
+            System.out.println("Found file: " + absolutePath);
+        }
+        return absolutePath;
+    }
+
+
     // заполнение всех полей в форме регистрации
-    public PracticeFormPage registrationStudent(String name, String surname, String email, String mobileNumber, String address ){
+    public PracticeFormPage registrationStudent(String testFirstName, String testLastName, String testEmail, String testMobileNumber, String testCurrentAddress){
 
-        String filePath = "D://img/dream.jpg";
 
-        driver.findElement(inputFirstName).sendKeys(name);
-        driver.findElement(inputLastName).sendKeys(surname);
-        driver.findElement(inputEmail).sendKeys(email);
+
+
+        driver.findElement(inputFirstName).sendKeys(testFirstName);
+        driver.findElement(inputLastName).sendKeys(testLastName);
+        driver.findElement(inputEmail).sendKeys(testEmail);
         driver.findElement(radioGenderMan).click();
-        driver.findElement(inputMobileNumber).sendKeys(mobileNumber);
+        driver.findElement(inputMobileNumber).sendKeys(testMobileNumber);
         driver.findElement(inputDateOfBird).click();
 
         WebElement inputDateOfBirdValue = driver.findElement(By.xpath("//div[@class='react-datepicker__week'][1]/div[1]"));
@@ -50,8 +63,8 @@ public class PracticeFormPage extends BasePage {
         driver.findElement(inputSubjects).sendKeys(Keys.RETURN);
         driver.findElement(checkSport).click();
         driver.findElement(checkReading).click();
-        driver.findElement(uploadPicture).sendKeys(filePath);
-        driver.findElement(currentAddress).sendKeys(address);
+        driver.findElement(uploadPicture).sendKeys(ResourceFileFinder());
+        driver.findElement(currentAddress).sendKeys(testCurrentAddress);
 
         driver.findElement(inputState).click();
         WebElement inputStateValue = driver.findElement(By.id("react-select-3-input"));
@@ -65,3 +78,4 @@ public class PracticeFormPage extends BasePage {
     }
 
 }
+

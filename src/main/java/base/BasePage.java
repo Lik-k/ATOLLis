@@ -1,6 +1,10 @@
 package base;
 
+import common.ResourceFileFinder;
 import org.openqa.selenium.WebDriver;
+
+import java.io.File;
+import java.net.URL;
 
 
 public class BasePage {
@@ -20,6 +24,4 @@ public class BasePage {
     public void closeBrowser() {
         driver.close();
     }
-
-
 }

@@ -4,7 +4,8 @@ import org.openqa.selenium.WebDriver;
 import base.BasePage;
 import practiceform.PracticeFormPage;
 import common.CommonAction;
-import static tests.practiceform.ConfigFotPracticeForm.*;
+import static tests.practiceform.DataObject.*;
+
 
 // сценарий теста
 public class PracticeFormTest {
